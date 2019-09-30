@@ -1,6 +1,6 @@
  .navbar{
            list-style:none;
-           background-color:white;
+           background-color:#847cf7
            overflow: hidden;
            padding: 0;
        }
@@ -12,7 +12,7 @@
            display:inline-block ;
        }
        .navbar li{
-           float:left;
+           float:right;
 
        }
        .navbar li:hover{
@@ -36,6 +36,4 @@
         .active {
            background-color:#ccffb3;
        }
-       .name {
-             font-family:"Tahoma", Geneva, sans-serif;
-       }
+
