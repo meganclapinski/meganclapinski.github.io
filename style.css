@@ -15,7 +15,7 @@
            float:left;
 
        }
-       .navbar li :hover{
+       .navbar li:hover{
            background-color:#99ccff;
        }
        .dropdown-content{
@@ -35,4 +35,7 @@
        }
         .active {
            background-color:#ccffb3;
+       }
+       .name {
+             font-family:"Tahoma", Geneva, sans-serif;
        }
