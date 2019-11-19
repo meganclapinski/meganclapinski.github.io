@@ -53,7 +53,7 @@
     #b1, #b2, #b3, #b4{
         display: inline-block;
         background-color: black;
-        color: black;
+        color: white;
         font-size: 16px;
         padding: 10px;
         border-radius: 8px;
@@ -113,12 +113,12 @@
 
     function intro(){
         pic.src = "images/sheep.jpg";
-        ptext1.innerHTML = "This is the intro to my story";
-        ptext2.innerHTML = "";
-        ptext3.innerHTML = "";
+        ptext1.innerHTML = "Once upon a time, there was a man named steve and a girl named alex. He was a tall fellow with brown hair. Alex was a short, young girl with orange hair. Both Steve and Alex were  curious about the world they lived in. Steve was a little stronger than Alex.  They both grew up together in a village out in a forest. There was food for everyone in the village, they both lived a great life, until, all of a sudden they got transported into a blocky world.";
+        ptext2.innerHTML = "They didn't know anything about this place"
+        ptext3.innerHTML = " So, do you look around for civilization or do you stay the night?";
         ptext4.innerHTML = "";
-        b1.innerHTML = "";
-        b2.innerHTML = "";
+        b1.innerHTML = "Stay the Night";
+        b2.innerHTML = "Search for Civilization";
         b1.style.display = "block";
         b2.style.display = "block";
         b3.style.display = "none";
@@ -126,59 +126,98 @@
         
     }
 
-    function meetWitch(){
+    function stayNight(){
         pic.src = "images/pig.jpg";
-        ptext1.innerHTML = "Hello, this is a pig";
-        ptext2.innerHTML = "What would you like to do?";
+        ptext1.innerHTML = "You decided to stay the night";
+        ptext2.innerHTML = "But you died to zombies"
         ptext3.innerHTML = "";
         ptext4.innerHTML = "";
-        b1.innerHTML = "";
+        b1.innerHTML = "Try Again";
         b2.innerHTML = "";
         b3.innerHTML = "";
         b1.style.display = "block";
-        b2.style.display = "block";
-        b3.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
         b4.style.display = "none";
         
     }
-    function attackWitch(){
+    function searchCivil(){
          pic.src = "images/pig.jpg";
-        ptext1.innerHTML = "Hello, this is the same pig.";
-        ptext2.innerHTML = "What would you like to do?";
+        ptext1.innerHTML = "Do you search for civilization as far as the eye can see, or do you walk a short distance?"
+        ptext2.innerHTML = 
         ptext3.innerHTML = "";
         ptext4.innerHTML = "";
-        b1.innerHTML = "";
+        b1.innerHTML = "As Far As The Eye"
+        b2.innerHTML = "Short distance";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+        
+    }
+    function asFar(){
+        pic.src = "";
+        ptext1.innerHTML = ""
+        ptext2.innerHTML = ""
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = ""
         b2.innerHTML = "";
         b3.innerHTML = "";
         b1.style.display = "block";
         b2.style.display = "block";
-        b3.style.display = "block";
+        b3.style.display = "none";
         b4.style.display = "none";
-        
+    }
+    function shortDistance(){
+         pic.src = "";
+        ptext1.innerHTML = ""
+        ptext2.innerHTML = ""
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = ""
+        b2.innerHTML = "";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
     }
 
     //state machine
     function bclick(button){
         if(state == "intro"){
             if (button == 1){
-                meetWitch();
-                state = "meetWitch";
+                stayNight();
+                state = "stayNight";
             }
-            else if(button == 2){
-                //Send them somewhere else
+        
+            else if (state=="stayNight"){
+                if(button==1){
+                    intro();
+                    state="intro";
+                }
+            }
+             else if(button == 2){
+                searchCivil();
+                state="searchCivil"
             }
         }
-        else if (state =="meetWitch"){
+        else if (state =="stayNight"){
             if (button == 1){
-                //___
-                attackWitch();
-                state = "attackWitch";
+                intro();
+                state = "intro";
+            }
+        }
+        if(state=="searchCivil"){
+            if (button==1){
+                asFar();
+                state="asFar";
             }
             else if(button == 2){
-                //_____
-            }
-            else if (button ==3){
-                //_____
+                shortDistance();
+                state="shortDistance";
             }
         }
         return false;
