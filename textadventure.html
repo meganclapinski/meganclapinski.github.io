@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+       <!DOCTYPE html>
 <html>
 <head>
 <title>Page Title</title>
@@ -13,7 +13,6 @@
         right: 0px;
         background-color: white;
     }
-
     #leftpane{
         width: 56%;
         height: 100%;
@@ -22,13 +21,11 @@
         align-items: center;
         justify-content: center;
     }
-
     #rightpane{
         width: 44%;
         height: 100%;
         float: left;
     }
-
     #storytext{
         position: absolute;
         bottom: 100px;
@@ -38,7 +35,6 @@
         justify-content: center;
         padding: 8px;
     }
-
     #choices{
         position: absolute;
         bottom: 0px;
@@ -49,7 +45,6 @@
         align-items: center;
         justify-content: center;
     }
-
     #b1, #b2, #b3, #b4{
         display: inline-block;
         background-color: black;
@@ -60,20 +55,17 @@
         text-decoration: none;
         margin: 8px;
     }
-
     #ptext1{
         color: black;
     }
     #ptext2{
         color: black;
     }
-
     #storyimg{
         max-height: 94%;
         max-width: 94%;
         width: 94%; 
     }
-
 </style>
 </head>
 <body>
@@ -110,7 +102,6 @@
     var b4 = document.getElementById('b4');
     var state = "intro";
     intro();
-
     function intro(){
         pic.src = "images/sheep.jpg";
         ptext1.innerHTML = "Once upon a time, there was a man named steve and a girl named alex. He was a tall fellow with brown hair. Alex was a short, young girl with orange hair. Both Steve and Alex were  curious about the world they lived in. Steve was a little stronger than Alex.  They both grew up together in a village out in a forest. There was food for everyone in the village, they both lived a great life, until, all of a sudden they got transported into a blocky world.";
@@ -125,7 +116,6 @@
         b4.style.display = "none";
         
     }
-
     function stayNight(){
         pic.src = "images/pig.jpg";
         ptext1.innerHTML = "You decided to stay the night";
@@ -184,7 +174,6 @@
         b3.style.display = "none";
         b4.style.display = "none";
     }
-
     //state machine
     function bclick(button){
         if(state == "intro"){
@@ -222,7 +211,6 @@
         }
         return false;
     }
-
 </script>
 </body>
 </html>
