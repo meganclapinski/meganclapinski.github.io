@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<title>Text Adventure</title>
 
 <style>
     #container{
         position: absolute;
-        top: 40px;
+        top: 75px;
         bottom: 0px;
         left: 0px;
         right: 0px;
@@ -79,6 +81,28 @@
 </style>
 </head>
 <body>
+
+ <ul class="navbar">
+
+
+
+
+            <li class="active"> <a href="index.html" >Home</a></li>
+             <li> <a href="aboutme.html">About Me</a></li>
+            <li> <a href="resume.html" >Resume</a></li>
+
+
+            <li class= "dropdown">
+              <div>Projects</div>
+              <ul class="dropdown-content">
+                  <li> <a href="project1.html">Text Adventure</a></li>
+                  <li> <a href="project2.html">Project 2</a></li>
+                  <li> <a href="project3.html">Project 3</a></li>
+                  </ul>
+            </li>
+            <li> <a href="contactme.html">Contact Me</a></li>
+            <h2> <b>  Megan Clapinski</b></h2>
+
     <div id='container'>
         <div id='leftpane'>
             <img id='storyimg' src="images/pig.jpg">
@@ -114,7 +138,7 @@
     intro();
 
     function intro(){
-        pic.src = "images/pig.jpg";
+        pic.src = "images/SteveAndAlex.jpg";
         ptext1.innerHTML = "Steve and Alex have entered into the world and have no idea of where they are at.";
         ptext2.innerHTML = "Do you look for civilization or do you stay the night? ";
         ptext3.innerHTML = "";
@@ -129,7 +153,7 @@
     }
 
     function stayNight(){
-        pic.src = "images/sheep.jpg";
+        pic.src = "images/Hardcore.jpg";
         ptext1.innerHTML = "You have decided to stay the night.";
         ptext2.innerHTML = "But you have died to zombies.";
         ptext3.innerHTML = ":(";
@@ -144,7 +168,7 @@
         
     }
     function searchCivil(){
-        pic.src = "images/sheep.jpg";
+        pic.src = "images/binoculars.jpg";
         ptext1.innerHTML = "You have decided to try and search for civilization.";
         ptext2.innerHTML = "Do you try to go as far as you can?";
         ptext3.innerHTML = "Or do you only look for a short amount of time?";
@@ -157,22 +181,8 @@
         b3.style.display = "none";
         b4.style.display = "none";
     }
-    function distance(){
-        pic.src = "images/sheep.jpg";
-        ptext1.innerHTML = "You have";
-        ptext2.innerHTML = "But you have found nothing ";
-        ptext3.innerHTML = "Do you walk futher?";
-        ptext4.innerHTML = "";
-        b1.innerHTML = "Walk futher.";
-        b2.innerHTML = "Don't walk futher.";
-        b3.innerHTML = "";
-        b1.style.display = "block";
-        b2.style.display = "none";
-        b3.style.display = "none";
-        b4.style.display = "none";
-    }
     function far(){
-         pic.src = "images/sheep.jpg";
+         pic.src = "images/desert.jpg";
         ptext1.innerHTML = "You have decided to look far and long ";
         ptext2.innerHTML = "And you have found civilization";
         ptext3.innerHTML = "Hit next to continue";
@@ -186,7 +196,7 @@
         b4.style.display = "none";
     }
     function short(){
-         pic.src = "images/sheep.jpg";
+         pic.src = "images/short.jpg";
         ptext1.innerHTML = "You have decided to look for a short amount of time";
         ptext2.innerHTML = "But you have found nothing ";
         ptext3.innerHTML = "Do you walk futher?";
@@ -195,35 +205,430 @@
         b2.innerHTML = "Don't walk futher.";
         b3.innerHTML = "";
         b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+    function walkFuther(){
+        pic.src = "images/far.png";
+        ptext1.innerHTML = "You have decided to walk futher."
+        ptext2.innerHTML = "Luckly you have found shelter at a nearby village."
+        ptext3.innerHTML = "Hit next to continue your journey";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Next.";
+        b2.innerHTML = "";
+        b3.innerHTML = "";
+        b1.style.display = "block";
         b2.style.display = "none";
         b3.style.display = "none";
         b4.style.display = "none";
     }
-  
-
+    function dontWalkFuther(){
+         pic.src = "images/Hardcore.jpg";
+        ptext1.innerHTML = "You have decided to not walk any futher ."
+        ptext2.innerHTML = "Because of this you spent the night in the dangerous desert and have died to zombies."
+        ptext3.innerHTML = ":(";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Try Again";
+        b2.innerHTML = "";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+    function next(){
+        pic.src = "images/accept.jpg";
+        ptext1.innerHTML = "The villagers give you a quest. The quest is to kill the ender dragon that has been terrorizing their village. Do you accept?"
+        ptext2.innerHTML= "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Yes";
+        b2.innerHTML = "No";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+    function accept(){
+        pic.src = "images/accept2.png";
+        ptext1.innerHTML = "You have accepted the quest to kill the ender dragon."
+        ptext2.innerHTML = ""
+        ptext3.innerHTML = "The villagers choose to let you see their arsenal. You can choose any two items you want. The items are a trident which it is enchanted with a leather armor. A sword with iron armor and a crossbow with a shield and a stone axe, shovel and a pickaxe.";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "A trident that is enchanted with leather armor ";
+        b2.innerHTML = "A sword with iron armor";
+        b3.innerHTML = "A crossbow and shield with a stone axe, shovel, and pickaxe";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "block";
+        b4.style.display = "none";
+    }
+    function decline(){
+        pic.src = "images/decline.png";
+        ptext1.innerHTML = "You have decided to decline the quest."
+        ptext2.innerHTML ="";
+        ptext3.innerHTML = "Are you sure you want to do this?";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Yes";
+        b2.innerHTML = "No";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+    function end1(){
+        pic.src = "images/Hardcore.jpg";
+        ptext1.innerHTML = "You have totally decline the quest"
+        ptext2.innerHTML ="Therefore the game is over. "
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Try Again";
+        b2.innerHTML = "";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+    function iron(){
+        pic.src = "images/sword.png";
+        ptext1.innerHTML = "You have choosen the sword with iron armor."
+        ptext2.innerHTML = "Hit next to continue "
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Next";
+        b2.innerHTML = "";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+    function trident(){
+       pic.src = "images/trident.jpg";
+        ptext1.innerHTML = "You have choosen the enchanted trident with leather armor."
+        ptext2.innerHTML = "Hit next to continue"
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Next";
+        b2.innerHTML = "";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none"; 
+    }
+    function crossbow(){
+          pic.src = "images/crossbow.png";
+        ptext1.innerHTML = "You have choosen a crossbow with a shield, pickaxe, and shovel."
+        ptext2.innerHTML = "Hit next to continue"
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Next";
+        b2.innerHTML = "";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none"; 
+    }
+    function enderEye(){
+        pic.src = "images/villager.png";
+        ptext1.innerHTML = "While in the village, a random villager came up to you and gave you your first ender eye to help guide you to complete the quest."
+        ptext2.innerHTML = "He tells you to start digging in the caves."
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Start your Adventure";
+        b2.innerHTML = "";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none"; 
+    }
+      function enderEye2(){
+        pic.src = "images/villager.png";
+        ptext1.innerHTML = "While in the village, a random villager came up to you and gave you your first ender eye to help guide you to complete the quest."
+        ptext2.innerHTML = "He tells you to start digging in the caves."
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Start your Adventure";
+        b2.innerHTML = "";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none"; 
+    }
+    function cantDig(){
+        pic.src = "images/Hardcore.jpg";
+        ptext1.innerHTML = "Since you don't have any tools to dig with, you can't explore"
+        ptext2.innerHTML = ":("
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Try Again";
+        b2.innerHTML = "";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none"; 
+    }
+    function startAdventure(){
+        pic.src = "images/cave.jpg";
+        ptext1.innerHTML = "You begin your journey inside the caves "
+        ptext2.innerHTML = "But you come to a split in the road"
+        ptext3.innerHTML = "Do you go right or left?";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Right";
+        b2.innerHTML = "Left";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none"; 
+    }
+    function right(){
+        pic.src = "images/enderportal.jpg";
+        ptext1.innerHTML = "You choose to go right."
+        ptext2.innerHTML = "And stumble upon the ender portal"
+        ptext3.innerHTML = "Do you jump inside or choose to go back";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Jump Inside";
+        b2.innerHTML = "Go back";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none"; 
+    }
+    function left(){
+        pic.src = "images/Hardcore.jpg";
+        ptext1.innerHTML = "You choose to go left"
+        ptext2.innerHTML = "And stumble upon a zombie spawner"
+        ptext3.innerHTML = "Since there was so many, you die";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Try Again";
+        b2.innerHTML = "";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none"; 
+    }
+    function jumpInside(){
+     pic.src = "images/enderdragon.jpg";
+        ptext1.innerHTML = "You decided to jump inside the ender portal and try and defeat the ender dragon."
+        ptext2.innerHTML = "Hit Next To Continue."
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Next";
+        b2.innerHTML = "";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none"; 
+    }
+    function goBack(){
+     pic.src = "images/Hardcore.jpg";
+        ptext1.innerHTML = "You choose to go left"
+        ptext2.innerHTML = "And stumble upon a zombie spawner, and die trying to get back"
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Try Again";
+        b2.innerHTML = "";
+        b3.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none"; 
+    }
+    function enderDragon(){
+         pic.src = "images/lastpart.jpg";
+        ptext1.innerHTML = "You begin your battle with the ender dragon. "
+        ptext2.innerHTML = "And defeat the dragon with 2 heart left, and no food."
+        ptext3.innerHTML = "You've completed the story and Alex And Steve go Back to the normal world";
+        ptext4.innerHTML = "The End";
+        b1.innerHTML = "";
+        b2.innerHTML = "";
+        b3.innerHTML = "";
+        b1.style.display = "none";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none"; 
+    }
     //state machine
     function bclick(button){
         if(state == "intro"){
-            if (button == 2){
-                stayNight();
-                state = "stayNight";
-            }
-        
-            else if(button == 1){
+            if (button == 1){
                 searchCivil();
                 state = "searchCivil";
             }
+        
+            else if(button == 2){
+                stayNight();
+                state = "stayNight";
+            }
         }
-            if(state == "stayNight"){
+           else if(state == "stayNight"){
                 if(button == 1 ){
                     intro();
                     state="intro";
             }
          }
-        if (state == "searchCivil"){
-            
+             else if(state == "searchCivil"){
+                if(button == 1){
+                    far();
+                    state = "far";
+                }
+             
+              else if(button == 2){
+                    short();
+                    state = "short";
+                }
+             }
+                else if (state =="short"){
+                    if(button ==1){
+                        walkFuther();
+                        state="walkFuther";
+                    }
+                    else if(button==2){
+                        dontWalkFuther();
+                        state="dontWalkFuther"
+                    }
+                }
+                    else if (state== "dontWalkFuther"){
+                        if(button ==1){
+                            intro();
+                            state="intro"
+                        }
+                    }
+                 else if (state =="walkFuther"){
+                    if (button ==1){
+                        next();
+                        state="next";
+                    }
+                }
+                else if (state=="far"){
+                    if (button==1){
+                        next();
+                        state="next";
+                    }
+                }
+                else if (state=="next"){
+                    if(button ==1){
+                        accept();
+                        state="accept";
+                    }
+                    else if(button ==2){
+                        decline();
+                        state="decline";
+                    }
+                }
+            else if (state=="decline"){
+                if (button ==1){
+                    end1();
+                    state="end1"
+                }
+            }
+            else if (state =="end1"){
+                if(button ==1){
+                    intro();
+                    state="intro";
+                }
+            }
+    else if(state == "accept"){
+        if(button ==1){
+            trident();
+                state="trident"
         }
-
+        else if(button==2){
+            iron();
+                state="iron";
+            }
+        else if (button ==3){
+            crossbow();
+            state="crossbow";
+        }
+    }    
+    else if(state == "trident"){
+        if(button==1){
+            enderEye();
+            state="enderEye"
+        }
+    }
+    else if(state=="iron"){
+        if(button==1){
+            enderEye();
+            state="enderEye"
+        }
+    }
+    else if(state=="crossbow"){
+        if(button==1){
+            enderEye2();
+            state="enderEye2";
+        }
+    }
+    else if (state=="enderEye"){
+        if(button==1){
+            cantDig();
+            state="cantDig";
+        }
+    }
+    else if(state=="cantDig"){
+        if(button==1){
+            intro();
+            state="intro";
+        }
+    }
+    else if(state=="enderEye2"){
+        if(button ==1){
+            startAdventure();
+            state="startAdventure";
+          }
+    }
+    else if(state=="startAdventure"){
+        if(button==1){
+            right();
+            state="right"
+        }
+        else if(button==2){
+            left();
+            state="left";
+        }
+    }
+    else if(state=="left"){
+        if(button==1){
+            intro();
+            state="intro"
+        }
+    }
+    else if (state=="right"){
+        if(button == 1){
+            jumpInside();
+            state="jumpInside"
+        }
+        else if(button==2){
+            goBack();
+            state="goBack"
+        }
+    }
+    else if(state=="goBack"){
+        if(button ==1){
+            intro();
+            state="intro"
+        }
+    }
+    else if(state=="jumpInside"){
+        if (button==1){
+            enderDragon();
+            state="enderDragon"
+        }
+    }
         return false;
     }
 
