@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <title>Megan's Portfolio </title>
+
+   <link rel="stylesheet" type="text/css" href="style.css">
+
+   </head>
+   <body>
+        <ul class="navbar">
+  
+            <li> <a href="index.html" >Home</a></li>
+             <li> <a href="aboutme.html">About Me</a></li>
+            <li> <a href="resume.html" >Resume</a></li>
+
+
+            <li class= "dropdown">
+              <div>Projects</div>
+              <ul class="dropdown-content">
+                  <li><a href="textadventure.html">Text Adventure</a></li>
+                  <li class= "active"> <a href="project2.html">Python Project</a></li>
+                  <li> <a href="project3.html"> Project 3</a></li>
+                  </ul>
+            </li>
+             <li> <a href="contactme.html">Contact Me</a></li>
+             <h2 class="name"><b> Megan Clapinski</b></h2>
+        </ul>
+
+        <h1>Python Project</h1>
+        <iframe height="400px" width="100%" src="https://repl.it/@BradynHargate/Hangman-Group-Project?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        <p>When creating the program, we came across many problems that held our program back. One of the first we encountered was limiting the number of wrong guesses while also counting the total amount of guesses. I first suggested that we create an if statement We first created a function called count_wrong, in that function we created an if statement. At first the program would shut down after two wrong guesses. We fixed this by creating a variable and setting it to 0. Then creating an if and else statement where another variable (new_guess) was in one of the parameters (secret) if it was we wouldn't add anything to the guess. Else we would add one. </p>
+        <p> Another difficulty we arrived while creating our program was getting the whole program to loop again. At first we separated the game into different functions, while loops, and if statements. After some time thinking about the problem and asking Mr. Landfried we can to the conclusion that we had to put the main base of the game, the main principals all together in one while loop. We added all of our if statements and variables in one while loop. </p>
+   
+   
+   </body>
+</html>
